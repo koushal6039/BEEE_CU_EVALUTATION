@@ -1,0 +1,57 @@
+2*2  dancing tiles circuit in arduino
+
+CONCEPT USED-
+Push button concept how it works in arduino.
+
+Learning and Observations-
+1.How to operate a matrix circuit.
+2.Push button concepts.
+
+Problems and troubleshooting-
+1.Less digital pins.
+
+Precautions-
+1.There should be resistor before grounding to get current towards switch.
+2.Wire connection should be precise.
+Code-
+void setup()
+{
+  int i,k;
+  for(i=1;i<=4;i++)
+  {
+    pinMode(i,INPUT);
+  }
+  for(k=8;k<=11;k++)
+  {
+    pinMode(k,OUTPUT);
+  }
+}
+
+void loop()
+{
+  if(1==HIGH)
+  {
+    digitalWrite(8,HIGH);
+    delay(2);
+    digitalWrite(8,LOW);
+}
+  if(2==HIGH)
+  {
+    digitalWrite(9,HIGH);
+    delay(2);
+    digitalWrite(9,LOW);
+}
+  if(3==HIGH)
+  {
+    digitalWrite(10,HIGH);
+    delay(2);
+    digitalWrite(10,LOW);
+}
+  if(4==HIGH)
+  {
+    digitalWrite(11,HIGH);
+    delay(2);
+    digitalWrite(11,LOW);
+}
+else 0;
+}
